@@ -71,19 +71,23 @@ export default function ContatoPage() {
                 <motion.div
                   key={c.title}
                   variants={fadeUp}
-                  className="bg-[#111815] border border-[#C9A84C]/10 p-10 rounded-[40px] flex flex-col justify-between hover:border-[#4ECDC4]/50 hover:bg-[#0A0F0D] transition-all duration-500 group"
+                  className="bg-[#111815] border border-[#C9A84C]/10 p-6 xl:p-8 rounded-[30px] xl:rounded-[40px] flex flex-col justify-between hover:border-[#4ECDC4]/50 hover:bg-[#0A0F0D] transition-all duration-500 group overflow-hidden"
                 >
-                  <div className="mb-8">
+                  <div className="mb-6 xl:mb-8">
                     <c.icon className="w-8 h-8 text-[#C9A84C] group-hover:text-[#4ECDC4] transition-colors" strokeWidth={1} />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-medium text-[#F5F0E8] mb-2">{c.title}</h3>
+                  <div className="w-full">
+                    <h3 className="text-lg font-medium text-[#F5F0E8] mb-1 xl:mb-2">{c.title}</h3>
                     {c.link ? (
-                      <a href={c.link} className="text-[#F5F0E8]/50 hover:text-[#C9A84C] font-light whitespace-pre-line text-sm transition-colors">
+                      <a 
+                        href={c.link} 
+                        title={c.content}
+                        className={`block w-full text-[#F5F0E8]/50 hover:text-[#C9A84C] font-light whitespace-nowrap overflow-hidden text-ellipsis transition-colors ${c.title === 'Email' ? 'text-[11.5px] sm:text-[12px] lg:text-[11px] xl:text-[13px] tracking-tight' : 'text-[13px] xl:text-sm'}`}
+                      >
                         {c.content}
                       </a>
                     ) : (
-                      <p className="text-[#F5F0E8]/50 font-light whitespace-pre-line text-sm">
+                      <p className="text-[#F5F0E8]/50 font-light whitespace-pre-line text-[13px] xl:text-sm">
                         {c.content}
                       </p>
                     )}
@@ -91,10 +95,10 @@ export default function ContatoPage() {
                 </motion.div>
               ))}
 
-              <motion.div variants={fadeUp} className="sm:col-span-2 bg-gradient-to-r from-[#111815] to-[#0A0F0D] border border-[#C9A84C]/10 p-10 rounded-[40px] flex items-center justify-between group">
+              <motion.div variants={fadeUp} className="sm:col-span-2 bg-gradient-to-r from-[#111815] to-[#0A0F0D] border border-[#C9A84C]/10 p-8 rounded-[40px] flex items-center justify-between group">
                 <div>
                   <h3 className="text-lg font-medium text-[#F5F0E8] mb-2">Redes Sociais</h3>
-                  <p className="text-[#F5F0E8]/50 font-light text-sm">Acompanhe nossas novidades.</p>
+                  <p className="text-[#F5F0E8]/50 font-light text-[13px] xl:text-sm">Acompanhe nossas novidades.</p>
                 </div>
                 <div className="flex gap-4">
                   <a href="https://www.instagram.com/pranaprodutosnaturais" className="w-12 h-12 rounded-full border border-[#C9A84C]/30 flex items-center justify-center hover:bg-[#C9A84C] hover:text-[#0A0F0D] transition-all text-[#4ECDC4]">

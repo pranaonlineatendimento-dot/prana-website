@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Desde 1994 no Barrashopping. Orgânicos, integrais, suplementos, veganos, sem glúten e muito mais. Saúde de verdade para o seu dia a dia.',
   icons: {
-    icon: '/assets/images/logo/logo-green.ico',
+    icon: '/assets/images/logo/logo-green-square.ico',
   },
   keywords: [
     'produtos naturais rio de janeiro',

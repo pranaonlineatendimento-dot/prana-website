@@ -88,47 +88,23 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
 
-          {/* Right: Collage */}
+          {/* Right: Portrait Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative h-[600px] hidden lg:block"
+            className="relative hidden lg:flex lg:justify-end lg:items-center w-full ml-auto"
           >
-            {/* Main Center Image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-96 z-20 hover:z-50 transition-all duration-500 hover:scale-105">
-              <div className="w-full h-full overflow-visible relative rotate-[-3deg]">
-                <Image
-                  src="/assets/images/products/fresh-whey-01.png"
-                  alt="Fresh Whey"
-                  fill
-                  className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] scale-125 hover:scale-150 transition-transform duration-700 pointer-events-none"
-                />
-              </div>
-            </div>
-
-            {/* Top Right Image */}
-            <div className="absolute top-12 right-0 w-56 h-72 z-10 hover:z-50 transition-all duration-500 hover:scale-105">
-              <div className="w-full h-full overflow-visible relative rotate-[4deg]">
-                <Image
-                  src="/assets/images/products/granola-01.png"
-                  alt="Granola Premium"
-                  fill
-                  className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] scale-110 hover:scale-125 transition-transform duration-700 pointer-events-none"
-                />
-              </div>
-            </div>
-
-            {/* Bottom Left Image */}
-            <div className="absolute bottom-10 left-10 w-48 h-56 z-30 hover:z-50 transition-all duration-500 hover:scale-105">
-              <div className="w-full h-full overflow-visible relative rotate-[-2deg]">
-                <Image
-                  src="/assets/images/products/01-dha-tg-liquid-e-pote-1.png"
-                  alt="DHA Liquid"
-                  fill
-                  className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] scale-110 hover:scale-125 transition-transform duration-700 pointer-events-none"
-                />
-              </div>
+            <div className="relative border border-[#C9A84C]/20 rounded-[2rem] overflow-hidden w-fit shadow-[0_0_40px_rgba(201,168,76,0.05)]">
+              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0A0F0D] to-transparent z-10 pointer-events-none" />
+              <Image
+                src="/assets/images/site-images/hero-portrait.png"
+                alt="Prana Produtos Naturais"
+                width={440}
+                height={550}
+                className="object-cover rounded-[2rem] w-[360px] xl:w-[440px] h-auto"
+                priority
+              />
             </div>
           </motion.div>
 
@@ -166,6 +142,39 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── FILOSOFIA BANNER ───────────────────────────────── */}
+      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/assets/images/site-images/hero-landscape.png"
+          alt="Nossa Filosofia"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50 z-0" />
+        
+        <div className="relative z-10 text-center px-6">
+          <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-6 drop-shadow-md">Nossa Filosofia</p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-7xl text-[#F5F0E8] font-serif leading-tight mb-8">
+              "Que seu alimento <br className="hidden md:block" />
+              seja seu remédio."
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-[1px] bg-[#4ECDC4]" />
+              <p className="text-[#4ECDC4] tracking-[0.3em] uppercase text-sm font-semibold">
+                — Hipócrates
+              </p>
+              <div className="w-12 h-[1px] bg-[#4ECDC4]" />
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -245,9 +254,14 @@ export default function HomePage() {
       </section>
 
       {/* ─── CATEGORIES ─────────────────────────────────────── */}
-      <section className="py-32 bg-[#111815] border-y border-[#C9A84C]/10 relative overflow-hidden">
-        {/* Decorative thin lines */}
-        <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)', backgroundSize: '120px 120px' }}></div>
+      <section className="py-32 relative overflow-hidden border-y border-[#C9A84C]/10">
+        <Image
+          src="/assets/images/site-images/categories-bg.png"
+          alt="Categorias Prana"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70 z-0" />
 
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
@@ -289,30 +303,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── QUOTE HIPÓCRATES ───────────────────────────────── */}
-      <section className="py-32 bg-[#0A0F0D] relative overflow-hidden border-y border-[#C9A84C]/10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A84C]/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="max-w-[1000px] mx-auto px-6 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-7xl text-[#F5F0E8] font-serif leading-[1.2] mb-8">
-              "Que seu alimento <br />
-              seja seu <span className="text-[#C9A84C] italic">remédio</span>."
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-[1px] bg-[#4ECDC4]" />
-              <p className="text-[#4ECDC4] tracking-[0.3em] uppercase text-sm font-semibold">
-                Hipócrates
-              </p>
-              <div className="w-12 h-[1px] bg-[#4ECDC4]" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* ─── ABOUT SNIPPET ──────────────────────────────────── */}
       <section className="py-32 relative">
@@ -339,19 +330,32 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-[#111815] rounded-[40px] p-10 flex flex-col items-center justify-center text-center border border-[#C9A84C]/20 hover:-translate-y-2 transition-transform duration-500 group">
-              <span className="text-6xl text-[#E8C96A] mb-4 group-hover:scale-110 transition-transform font-serif">30+</span>
-              <span className="text-[#F5F0E8]/50 text-sm uppercase tracking-widest">anos de experiência</span>
+          <div className="flex flex-col gap-6">
+            <div className="border border-[#C9A84C]/30 rounded-2xl overflow-hidden relative">
+              <Image
+                src="/assets/images/site-images/about-store.png"
+                alt="Prana Produtos Naturais Loja Física"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover rounded-2xl hover:scale-105 transition-transform duration-700"
+              />
             </div>
-            <div className="bg-[#111815] rounded-[40px] p-10 flex flex-col items-center justify-center text-center border border-[#C9A84C]/20 hover:-translate-y-2 transition-transform duration-500 group">
-              <span className="text-6xl text-[#4ECDC4] mb-4 group-hover:scale-110 transition-transform font-serif">1k+</span>
-              <span className="text-[#F5F0E8]/50 text-sm uppercase tracking-widest">produtos premium</span>
-            </div>
-            <div className="col-span-2 bg-gradient-to-br from-[#111815] to-[#0A0F0D] rounded-[40px] p-10 flex items-center justify-center text-center border border-[#4ECDC4]/20 hover:border-[#4ECDC4]/50 transition-colors">
-              <div>
-                <span className="text-3xl text-[#F5F0E8] mb-2 block font-serif">Barrashopping Rio</span>
-                <span className="text-[#F5F0E8]/50 text-sm uppercase tracking-widest">Desde 1994</span>
+            <p className="text-center text-[#C9A84C] text-sm uppercase tracking-widest font-medium mb-2">Prana Produtos Naturais · Barrashopping</p>
+
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-[#111815] rounded-[30px] p-6 flex flex-col items-center justify-center text-center border border-[#C9A84C]/20 hover:-translate-y-2 transition-transform duration-500 group">
+                <span className="text-5xl text-[#E8C96A] mb-2 group-hover:scale-110 transition-transform font-serif">30+</span>
+                <span className="text-[#F5F0E8]/50 text-xs uppercase tracking-widest">anos de experiência</span>
+              </div>
+              <div className="bg-[#111815] rounded-[30px] p-6 flex flex-col items-center justify-center text-center border border-[#C9A84C]/20 hover:-translate-y-2 transition-transform duration-500 group">
+                <span className="text-5xl text-[#4ECDC4] mb-2 group-hover:scale-110 transition-transform font-serif">1k+</span>
+                <span className="text-[#F5F0E8]/50 text-xs uppercase tracking-widest">produtos premium</span>
+              </div>
+              <div className="col-span-2 bg-gradient-to-br from-[#111815] to-[#0A0F0D] rounded-[30px] p-6 flex items-center justify-center text-center border border-[#4ECDC4]/20 hover:border-[#4ECDC4]/50 transition-colors">
+                <div>
+                  <span className="text-2xl text-[#F5F0E8] mb-1 block font-serif">Barrashopping Rio</span>
+                  <span className="text-[#F5F0E8]/50 text-xs uppercase tracking-widest">Desde 1994</span>
+                </div>
               </div>
             </div>
           </div>
