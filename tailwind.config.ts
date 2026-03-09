@@ -12,10 +12,10 @@ const config: Config = {
         prana: {
           dark: '#0A0F0D',
           darker: '#111815',
-          gold: '#C9A84C',
+          gold: '#A88573',
           'gold-light': '#E8C96A',
-          teal: '#4ECDC4',
-          'teal-light': '#2DD4BF',
+          teal: '#480e0d',
+          'teal-light': '#7a1a17',
           cream: '#F5F0E8',
         },
       },

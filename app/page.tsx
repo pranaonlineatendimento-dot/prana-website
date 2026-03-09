@@ -31,13 +31,13 @@ const staggerContainer = {
 
 export default function HomePage() {
   return (
-    <div className="bg-[#0A0F0D] overflow-hidden selection:bg-[#C9A84C] selection:text-[#0A0F0D]">
+    <div className="bg-[#FCF9F2] overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
       
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center pt-24 pb-12">
         {/* Glow Effects */}
-        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-[#4ECDC4]/10 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#C9A84C]/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-[#480e0d]/10 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#A88573]/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full z-10">
           
@@ -48,25 +48,25 @@ export default function HomePage() {
             animate="visible"
             className="flex flex-col items-start"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 border border-[#C9A84C]/40 bg-[#111815] rounded-full px-4 py-1.5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#4ECDC4] animate-pulse" />
-              <span className="text-xs text-[#E8C96A] font-medium tracking-widest uppercase">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 border border-[#A88573]/40 bg-white rounded-full px-4 py-1.5 mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#480e0d] animate-pulse" />
+              <span className="text-xs text-[#C4A18F] font-medium tracking-widest uppercase">
                 Barrashopping · Desde 1994
               </span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
-              className="text-6xl sm:text-7xl lg:text-8xl text-[#F5F0E8] leading-[1.05] mb-8 font-serif"
+              className="text-6xl sm:text-7xl lg:text-8xl text-[#3E2723] leading-[1.05] mb-8 font-serif"
             >
               Saúde que<br />
-              <em className="not-italic bg-clip-text text-transparent bg-gradient-to-r from-[#4ECDC4] to-[#2DD4BF]">
+              <em className="not-italic bg-clip-text text-transparent bg-gradient-to-r from-[#480e0d] to-[#7a1a17]">
                 transforma
               </em><br />
               sua vida.
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="text-[#F5F0E8]/70 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-lg">
+            <motion.p variants={fadeUp} className="text-[#3E2723]/70 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-lg">
               Orgânicos, funcionais e os melhores suplementos. 
               Uma curadoria de excelência para quem exige resultados e qualidade superior.
             </motion.p>
@@ -74,14 +74,14 @@ export default function HomePage() {
             <motion.div variants={fadeUp} className="flex flex-wrap gap-5">
               <Link
                 href="/produtos"
-                className="inline-flex items-center gap-3 bg-[#4ECDC4] text-[#0A0F0D] px-8 py-4 rounded-full font-semibold hover:bg-[#2DD4BF] hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(78,205,196,0.3)]"
+                className="inline-flex items-center gap-3 bg-[#480e0d] text-[#FCF9F2] px-8 py-4 rounded-full font-semibold hover:bg-[#7a1a17] hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(72,14,13,0.3)]"
               >
                 Explorar Coleção
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/sobre"
-                className="inline-flex items-center gap-3 border border-[#C9A84C] text-[#C9A84C] px-8 py-4 rounded-full font-medium hover:bg-[#C9A84C] hover:text-[#0A0F0D] transition-all duration-300"
+                className="inline-flex items-center gap-3 border border-[#A88573] text-[#A88573] px-8 py-4 rounded-full font-medium hover:bg-[#A88573] hover:text-[#FCF9F2] transition-all duration-300"
               >
                 Nossa Essência
               </Link>
@@ -95,8 +95,8 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             className="relative hidden lg:flex lg:justify-end lg:items-center w-full ml-auto"
           >
-            <div className="relative border border-[#C9A84C]/20 rounded-[2rem] overflow-hidden w-fit shadow-[0_0_40px_rgba(201,168,76,0.05)]">
-              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0A0F0D] to-transparent z-10 pointer-events-none" />
+            <div className="relative border border-[#A88573]/40 rounded-[2rem] overflow-hidden w-fit shadow-[0_0_40px_rgba(168,133,115,0.05)]">
+              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#FCF9F2] to-transparent z-10 pointer-events-none" />
               <Image
                 src="/assets/images/site-images/hero-portrait.png"
                 alt="Prana Produtos Naturais"
@@ -115,7 +115,7 @@ export default function HomePage() {
           onClick={() => document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' })}
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[#C9A84C]/50 hover:text-[#C9A84C] transition-colors cursor-pointer"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[#A88573]/50 hover:text-[#A88573] transition-colors cursor-pointer"
           aria-label="Rolar para baixo"
         >
           <ChevronDown className="w-8 h-8" />
@@ -123,20 +123,20 @@ export default function HomePage() {
       </section>
 
       {/* ─── STATS BAR ────────────────────────────────────── */}
-      <section id="stats" className="border-y border-[#C9A84C]/10 bg-[#111815]/50 backdrop-blur-sm backdrop-saturate-150 py-10 relative z-20">
+      <section id="stats" className="border-y border-[#A88573]/30 bg-white/50 backdrop-blur-sm backdrop-saturate-150 py-10 relative z-20">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-x-0 lg:divide-x divide-[#C9A84C]/10 text-center lg:text-left">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-x-0 lg:divide-x divide-[#A88573]/10 text-center lg:text-left">
             {[
-              { num: '30', label: 'anos de tradição' },
+              { num: '44+', label: 'anos de história' },
               { num: '1000+', label: 'produtos premium' },
               { num: 'Rio', label: 'de Janeiro' },
-              { num: 'Barra', label: 'Shopping' }
+              { num: '100%', label: 'Qualidade' }
             ].map((stat, i) => (
               <div key={i} className="flex flex-col px-0 lg:px-12 items-center lg:items-start justify-center">
-                <span className="text-4xl sm:text-5xl font-bold text-[#C9A84C] tracking-tight mb-2 font-serif">
+                <span className="text-4xl sm:text-5xl font-bold text-[#A88573] tracking-tight mb-2 font-serif">
                   {stat.num}
                 </span>
-                <span className="text-xs uppercase tracking-[0.2em] font-medium text-[#4ECDC4]">
+                <span className="text-xs uppercase tracking-[0.2em] font-medium text-[#480e0d]">
                   {stat.label}
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/50 z-0" />
         
         <div className="relative z-10 text-center px-6">
-          <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-6 drop-shadow-md">Nossa Filosofia</p>
+          <p className="text-[#A88573] text-sm font-semibold tracking-widest uppercase mb-6 drop-shadow-md">Nossa Filosofia</p>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -168,107 +168,24 @@ export default function HomePage() {
               seja seu remédio."
             </h2>
             <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-[1px] bg-[#4ECDC4]" />
-              <p className="text-[#4ECDC4] tracking-[0.3em] uppercase text-sm font-semibold">
+              <div className="w-12 h-[1px] bg-[#F5F0E8]/50" />
+              <p className="text-[#F5F0E8]/80 tracking-[0.3em] uppercase text-sm font-semibold">
                 — Hipócrates
               </p>
-              <div className="w-12 h-[1px] bg-[#4ECDC4]" />
+              <div className="w-12 h-[1px] bg-[#F5F0E8]/50" />
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* ─── FEATURED PRODUCTS ────────────────────────────── */}
-      <section className="py-32 relative z-20">
-        <div className="max-w-[1400px] mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
-          >
-            <div>
-              <p className="text-[#C9A84C] text-sm uppercase tracking-[0.2em] mb-4 font-semibold">Exclusividade</p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#F5F0E8] font-serif">
-                Produtos em Destaque
-              </h2>
-            </div>
-            <p className="text-[#F5F0E8]/60 max-w-xs text-sm md:text-md">
-              Uma seleção especial contendo a máxima qualidade para o seu bem-estar.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { img: 'cookies-01.png', name: 'Cookies Integrais', cat: 'Integral' },
-              { img: 'fresh-whey-01.png', name: 'Fresh Whey', cat: 'Suplemento' },
-              { img: 'granola-01.png', name: 'Granola Artesanal', cat: 'Orgânico' },
-              { img: 'magnesio-01.png', name: 'Magnésio', cat: 'Suplemento' },
-              { img: 'mahta-01.png', name: 'Mahta', cat: 'Funcional' },
-              { img: '01-Kombucha-Refrigerada-400ml-6-sabores-20un.png', name: 'Kombucha Artesanal', cat: 'Bebidas' },
-              { img: '01-crunch-gold-snack.png', name: 'Crunch Gold', cat: 'Proteico' },
-              { img: '01-colageno_hidrolisado_500mg_120caps_qualynutri.png', name: 'Colágeno', cat: 'Nutrição' },
-            ].map((p, i) => (
-              <motion.div
-                key={p.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="h-full"
-              >
-                <Link
-                  href="/produtos"
-                  className="group relative bg-[#111815] rounded-3xl border border-[#C9A84C]/10 overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(201,168,76,0.15)] flex flex-col pt-8 transition-all duration-500 hover:border-[#C9A84C]/50 h-full"
-                >
-                  <div className="aspect-square relative overflow-visible w-full px-8 flex items-center justify-center">
-                    <Image
-                      src={`/assets/images/products/${p.img}`}
-                      alt={p.name}
-                      width={400}
-                      height={400}
-                      className="object-contain w-full h-full group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] drop-shadow-2xl"
-                    />
-                  </div>
-                  <div className="p-6 relative z-10 flex flex-col items-center justify-end flex-grow mt-4">
-                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#4ECDC4] mb-3 px-3 py-1 bg-[#0A0F0D] rounded-full border border-[#4ECDC4]/20">
-                      {p.cat}
-                    </span>
-                    <h3 className="text-[#F5F0E8] text-lg font-medium text-center">{p.name}</h3>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <Link
-              href="/produtos"
-              className="inline-flex items-center gap-2 text-[#C9A84C] font-semibold text-lg hover:text-[#E8C96A] transition-colors"
-            >
-              Ver Galeria Completa <ArrowRight className="w-5 h-5 transition-transform hover:translate-x-2" />
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* ─── CATEGORIES ─────────────────────────────────────── */}
-      <section className="py-32 relative overflow-hidden border-y border-[#C9A84C]/10">
-        <Image
-          src="/assets/images/site-images/categories-bg.png"
-          alt="Categorias Prana"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/70 z-0" />
-
+      <section className="py-32 relative overflow-hidden bg-white border-y border-[#A88573]/30">
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl text-[#F5F0E8] font-serif">
+            <h2 className="text-4xl md:text-5xl text-[#3E2723] font-serif">
               O que você encontra aqui
             </h2>
-            <div className="w-24 h-[1px] bg-[#C9A84C] mx-auto mt-8" />
+            <div className="w-24 h-[1px] bg-[#A88573] mx-auto mt-8" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -286,15 +203,15 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group bg-[#0A0F0D] border border-[#C9A84C]/20 p-10 hover:border-[#4ECDC4] transition-colors duration-500 rounded-[30px]"
+                className="group bg-[#FCF9F2] border border-[#A88573]/40 p-10 hover:border-[#480e0d] transition-colors duration-500 rounded-[30px]"
               >
-                <div className="mb-6 w-14 h-14 rounded-2xl border border-[#4ECDC4]/30 bg-[#4ECDC4]/5 flex items-center justify-center text-[#4ECDC4] group-hover:bg-[#4ECDC4] group-hover:text-[#0A0F0D] transition-colors duration-500">
+                <div className="mb-6 w-14 h-14 rounded-2xl border border-[#480e0d]/30 bg-[#480e0d]/5 flex items-center justify-center text-[#480e0d] group-hover:bg-[#480e0d] group-hover:text-[#FCF9F2] transition-colors duration-500">
                   <c.icon className="w-6 h-6" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl text-[#C9A84C] mb-4 font-serif">
+                <h3 className="text-2xl text-[#A88573] mb-4 font-serif">
                   {c.title}
                 </h3>
-                <p className="text-[#F5F0E8]/60 leading-relaxed font-light">
+                <p className="text-[#3E2723]/60 leading-relaxed font-light">
                   {c.desc}
                 </p>
               </motion.div>
@@ -309,52 +226,54 @@ export default function HomePage() {
       <section className="py-32 relative">
         <div className="max-w-[1400px] mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <div className="w-12 h-1 bg-[#4ECDC4] mb-8" />
-            <h2 className="text-4xl md:text-5xl lg:text-7xl text-[#F5F0E8] leading-tight mb-8 italic font-serif">
-              "Três décadas <br />
-              <span className="text-[#C9A84C]">cuidando da sua essência."</span>
+            <div className="w-12 h-1 bg-[#480e0d] mb-8" />
+            <h2 className="text-4xl md:text-5xl lg:text-7xl text-[#3E2723] leading-tight mb-8 italic font-serif">
+              "Mais de quatro décadas <br />
+              <span className="text-[#A88573]">cuidando da sua essência."</span>
             </h2>
-            <p className="text-[#F5F0E8]/70 text-lg leading-relaxed mb-6 font-light">
-              Nascemos em 1994, com o propósito de ser mais que uma loja: um ponto de encontro de 
+            <p className="text-[#3E2723]/70 text-lg leading-relaxed mb-6 font-light">
+              Na realidade, a Prana existe desde 1980, com a nossa primeira loja no Leblon (que funcionou até 2015). 
+              Nascemos com o propósito de ser mais que uma loja: um ponto de encontro de 
               pessoas que acreditam que a natureza oferece tudo o que precisamos.
             </p>
-            <p className="text-[#F5F0E8]/70 text-lg leading-relaxed mb-10 font-light">
+            <p className="text-[#3E2723]/70 text-lg leading-relaxed mb-10 font-light">
               Nossa curadoria segue o rigor da ciência da nutrição moderna aliado com a sabedoria ancestral, 
-              entregando produtos de ponta no Barrashopping.
+              entregando produtos de ponta no Barrashopping (desde 1994).
             </p>
             <Link
               href="/sobre"
-              className="inline-flex items-center gap-3 text-[#C9A84C] uppercase tracking-widest text-sm font-semibold hover:text-[#4ECDC4] transition-colors"
+              className="inline-flex items-center gap-3 text-[#A88573] uppercase tracking-widest text-sm font-semibold hover:text-[#480e0d] transition-colors"
             >
               Conheça Nossa História <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="border border-[#C9A84C]/30 rounded-2xl overflow-hidden relative">
+            <div className="border border-[#A88573]/30 rounded-2xl overflow-hidden relative">
               <Image
-                src="/assets/images/site-images/about-store.png"
+                src={`/assets/images/site-images/about-store.png`}
                 alt="Prana Produtos Naturais Loja Física"
                 width={600}
                 height={400}
+                unoptimized
                 className="w-full h-auto object-cover rounded-2xl hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <p className="text-center text-[#C9A84C] text-sm uppercase tracking-widest font-medium mb-2">Prana Produtos Naturais · Barrashopping</p>
+            <p className="text-center text-[#A88573] text-sm uppercase tracking-widest font-medium mb-2">Prana Produtos Naturais · Barrashopping</p>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-[#111815] rounded-[30px] p-6 flex flex-col items-center justify-center text-center border border-[#C9A84C]/20 hover:-translate-y-2 transition-transform duration-500 group">
-                <span className="text-5xl text-[#E8C96A] mb-2 group-hover:scale-110 transition-transform font-serif">30+</span>
-                <span className="text-[#F5F0E8]/50 text-xs uppercase tracking-widest">anos de experiência</span>
+              <div className="bg-white rounded-[30px] p-6 flex flex-col items-center justify-center text-center border border-[#A88573]/40 hover:-translate-y-2 transition-transform duration-500 group">
+                <span className="text-5xl text-[#C4A18F] mb-2 group-hover:scale-110 transition-transform font-serif">44+</span>
+                <span className="text-[#3E2723]/50 text-xs uppercase tracking-widest">anos de história</span>
               </div>
-              <div className="bg-[#111815] rounded-[30px] p-6 flex flex-col items-center justify-center text-center border border-[#C9A84C]/20 hover:-translate-y-2 transition-transform duration-500 group">
-                <span className="text-5xl text-[#4ECDC4] mb-2 group-hover:scale-110 transition-transform font-serif">1k+</span>
-                <span className="text-[#F5F0E8]/50 text-xs uppercase tracking-widest">produtos premium</span>
+              <div className="bg-white rounded-[30px] p-6 flex flex-col items-center justify-center text-center border border-[#A88573]/40 hover:-translate-y-2 transition-transform duration-500 group">
+                <span className="text-5xl text-[#480e0d] mb-2 group-hover:scale-110 transition-transform font-serif">1k+</span>
+                <span className="text-[#3E2723]/50 text-xs uppercase tracking-widest">produtos premium</span>
               </div>
-              <div className="col-span-2 bg-gradient-to-br from-[#111815] to-[#0A0F0D] rounded-[30px] p-6 flex items-center justify-center text-center border border-[#4ECDC4]/20 hover:border-[#4ECDC4]/50 transition-colors">
+              <div className="col-span-2 bg-gradient-to-br from-white to-[#FCF9F2] rounded-[30px] p-6 flex items-center justify-center text-center border border-[#480e0d]/20 hover:border-[#480e0d]/50 transition-colors">
                 <div>
-                  <span className="text-2xl text-[#F5F0E8] mb-1 block font-serif">Barrashopping Rio</span>
-                  <span className="text-[#F5F0E8]/50 text-xs uppercase tracking-widest">Desde 1994</span>
+                  <span className="text-2xl text-[#3E2723] mb-1 block font-serif">Desde 1980</span>
+                  <span className="text-[#3E2723]/50 text-xs uppercase tracking-widest">Saúde & Bem-Estar</span>
                 </div>
               </div>
             </div>
@@ -363,26 +282,25 @@ export default function HomePage() {
       </section>
 
       {/* ─── WHATSAPP CTA ───────────────────────────────────── */}
-      <section className="py-40 bg-[#111815] relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F0D] via-transparent to-[#0A0F0D] pointer-events-none" />
+      <section className="py-40 bg-[#FCF9F2] relative">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-5xl md:text-7xl font-light mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#4ECDC4] via-[#F5F0E8] to-[#C9A84C] leading-snug font-serif">
+          <h2 className="text-5xl md:text-7xl font-light mb-10 text-[#480e0d] leading-snug font-serif">
             Atendimento Exclusivo<br />no seu WhatsApp
           </h2>
-          <p className="text-[#F5F0E8]/60 text-xl font-light mb-16">
+          <p className="text-[#3E2723]/60 text-xl font-light mb-16">
             Nossos consultores estão disponíveis para criar uma curadoria personalizada e tirar todas as suas dúvidas.
           </p>
           
-          <div className="bg-[#0A0F0D] border border-[#C9A84C]/30 p-10 rounded-[40px] inline-flex flex-col items-center shadow-[0_0_50px_rgba(201,168,76,0.1)]">
+          <div className="bg-[#FCF9F2] border border-[#A88573]/30 p-10 rounded-[40px] inline-flex flex-col items-center shadow-[0_0_50px_rgba(168,133,115,0.1)]">
             <div className="bg-white p-4 rounded-3xl mb-10 shadow-lg">
               <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://wa.me/5521924319047&color=0A0F0D&bgcolor=FFFFFF"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://wa.me/5521967735442&color=480e0d&bgcolor=FFFFFF"
                 alt="WhatsApp QR Code"
                 className="w-40 h-40"
               />
             </div>
             <a
-              href="https://wa.me/5521924319047"
+              href="https://wa.me/5521967735442"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] text-white px-12 py-5 rounded-full text-xl font-bold hover:scale-105 hover:bg-[#128C7E] hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] transition-all duration-300 w-full sm:w-auto text-center flex items-center gap-3"
@@ -396,10 +314,10 @@ export default function HomePage() {
           </div>
 
           <div className="flex justify-center gap-8 mt-16">
-            <a href="https://www.instagram.com/pranaprodutosnaturais" className="text-[#F5F0E8]/40 hover:text-[#C9A84C] transition-colors">
+            <a href="https://www.instagram.com/pranabarraprodutosnaturais" className="text-[#3E2723]/40 hover:text-[#A88573] transition-colors">
               <Instagram className="w-8 h-8" strokeWidth={1.5} />
             </a>
-            <a href="https://www.facebook.com/pranaprodutosnaturais" className="text-[#F5F0E8]/40 hover:text-[#C9A84C] transition-colors">
+            <a href="https://www.facebook.com/pranaprodutosnaturais" className="text-[#3E2723]/40 hover:text-[#A88573] transition-colors">
               <Facebook className="w-8 h-8" strokeWidth={1.5} />
             </a>
           </div>
@@ -410,12 +328,12 @@ export default function HomePage() {
       <section className="py-32">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl text-[#C9A84C] font-serif">
+            <h2 className="text-4xl text-[#A88573] font-serif">
               Nosso Endereço
             </h2>
-            <div className="w-16 h-[1px] bg-[#4ECDC4] mx-auto mt-6" />
+            <div className="w-16 h-[1px] bg-[#480e0d] mx-auto mt-6" />
           </div>
-          <div className="rounded-[40px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,1)] border border-[#C9A84C]/20 h-[500px] relative filter grayscale-[20%] sepia-[20%] hue-rotate-180 brightness-[80%] contrast-[120%] hover:filter-none transition-all duration-1000">
+          <div className="rounded-[40px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,1)] border border-[#A88573]/40 h-[500px] relative filter grayscale-[20%] sepia-[20%] hue-rotate-180 brightness-[80%] contrast-[120%] hover:filter-none transition-all duration-1000">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2!2d-43.3650!3d-22.9990!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2f0a51ccdff7%3A0x2c3f3c!2sBarraShopping!5e0!3m2!1spt!2sbr!4v1234567890"
               width="100%"
@@ -427,8 +345,8 @@ export default function HomePage() {
               title="BarraShopping"
             />
           </div>
-          <p className="text-center text-[#F5F0E8]/50 mt-10 tracking-widest text-sm">
-            AV. DAS AMÉRICAS, 4666 — LOJA 141 · BARRASHOPPING · RIO DE JANEIRO, RJ · 22640-102
+          <p className="text-center text-[#3E2723]/50 mt-10 tracking-widest text-sm">
+            Av. das Américas 4666, loja 141, Barra Shopping (Mercado Praça XV), Barra da Tijuca, Rio de Janeiro · 22640-102
           </p>
         </div>
       </section>

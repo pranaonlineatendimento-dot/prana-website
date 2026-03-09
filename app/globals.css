@@ -10,10 +10,10 @@
 
   --color-dark: #0A0F0D;
   --color-darker: #111815;
-  --color-gold: #C9A84C;
-  --color-gold-light: #E8C96A;
-  --color-teal: #4ECDC4;
-  --color-teal-light: #2DD4BF;
+  --color-gold: #A88573;
+  --color-gold-light: #C4A18F;
+  --color-teal: #480e0d;
+  --color-teal-light: #7a1a17;
   --color-cream: #F5F0E8;
 }
 
@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-dark);
-  color: var(--color-cream);
+  background-color: #FCF9F2;
+  color: #3E2723;
   overflow-x: hidden;
 }
 

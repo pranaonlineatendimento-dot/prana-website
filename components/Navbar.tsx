@@ -32,7 +32,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0A0F0D]/80 backdrop-blur-xl border-b border-[#C9A84C]/10 shadow-lg shadow-black/20'
+          ? 'bg-[#FCF9F2]/80 backdrop-blur-xl border-b border-[#A88573]/30 shadow-lg shadow-black/20'
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <Image
-            src="/assets/images/logo/logo-green.png"
+            src="/assets/images/logo/logo-grena.png"
             alt="Prana"
             width={150}
             height={60}
@@ -58,14 +58,14 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={`relative text-sm font-medium tracking-wide transition-colors ${
-                  isActive ? 'text-[#C9A84C]' : 'text-[#F5F0E8]/70 hover:text-[#C9A84C]'
+                  isActive ? 'text-[#A88573]' : 'text-[#3E2723]/70 hover:text-[#A88573]'
                 }`}
               >
                 {label}
                 {isActive && (
                   <motion.div
                     layoutId="navbar-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-[1px] bg-[#C9A84C]"
+                    className="absolute -bottom-1 left-0 right-0 h-[1px] bg-[#A88573]"
                     initial={false}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
@@ -77,7 +77,7 @@ export default function Navbar() {
 
         {/* WhatsApp CTA */}
         <a
-          href="https://wa.me/5521924319047"
+          href="https://wa.me/5521967735442"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#128C7E] transition-all duration-300"
@@ -91,7 +91,7 @@ export default function Navbar() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden p-2 text-[#F5F0E8] hover:text-[#C9A84C] transition-colors"
+          className="md:hidden p-2 text-[#3E2723] hover:text-[#A88573] transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -106,7 +106,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-[#111815] border-t border-[#C9A84C]/10"
+            className="md:hidden overflow-hidden bg-white border-t border-[#A88573]/30"
           >
             <div className="px-6 py-8 flex flex-col gap-6">
               {links.map(({ href, label }) => (
@@ -115,18 +115,18 @@ export default function Navbar() {
                   href={href}
                   onClick={() => setOpen(false)}
                   className={`text-lg font-medium tracking-wide ${
-                    pathname === href ? 'text-[#C9A84C]' : 'text-[#F5F0E8]/80'
+                    pathname === href ? 'text-[#A88573]' : 'text-[#3E2723]/80'
                   }`}
                 >
                   {label}
                 </Link>
               ))}
               <a
-                href="https://wa.me/5521924319047"
+                href="https://wa.me/5521967735442"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="mt-4 flex items-center justify-center gap-2 bg-[#4ECDC4] text-[#0A0F0D] px-6 py-3 rounded-full font-medium w-full"
+                className="mt-4 flex items-center justify-center gap-2 bg-[#480e0d] text-[#FCF9F2] px-6 py-3 rounded-full font-medium w-full"
               >
                 Falar no WhatsApp
               </a>

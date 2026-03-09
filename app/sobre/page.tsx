@@ -10,14 +10,14 @@ const fadeUp = {
 
 const timelineItems = [
   {
-    year: '1994',
+    year: '1980',
     title: 'O Início',
-    desc: 'Nasce a Prana, buscando pioneirismo com foco exclusivo em suplementos e saúde, inaugurando as portas no Barrashopping.',
+    desc: 'Nasce a Prana, buscando pioneirismo com nossa primeira loja no Leblon (em funcionamento até 2015).',
   },
   {
-    year: '2005',
-    title: 'Expansão Natural',
-    desc: 'Incorporamos o mix definitivo de cereais, integrais e orgânicos, acompanhando a evolução da nutrição.',
+    year: '1994',
+    title: 'A chegada ao Barrashopping',
+    desc: 'Expandimos a nossa operação, inaugurando as portas no coração da Barra da Tijuca, focando ainda mais em saúde.',
   },
   {
     year: '2015',
@@ -40,11 +40,11 @@ const values = [
 
 export default function SobrePage() {
   return (
-    <div className="bg-[#0A0F0D] overflow-hidden selection:bg-[#C9A84C] selection:text-[#0A0F0D]">
+    <div className="bg-[#FCF9F2] overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
       
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="relative pt-48 pb-32 flex flex-col items-center justify-center text-center">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#4ECDC4]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#480e0d]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
         
         <motion.div
           initial="hidden"
@@ -52,12 +52,12 @@ export default function SobrePage() {
           variants={fadeUp}
           className="max-w-4xl mx-auto px-6 relative z-10"
         >
-          <p className="text-[#C9A84C] tracking-widest uppercase text-xs font-bold mb-6">Nossa História</p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl text-[#F5F0E8] leading-[1.1] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <p className="text-[#A88573] tracking-widest uppercase text-xs font-bold mb-6">Nossa História</p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl text-[#3E2723] leading-[1.1] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
             A Arte do <br />
-            <em className="text-[#4ECDC4] not-italic">Bem-Viver.</em>
+            <em className="text-[#480e0d] not-italic">Bem-Viver.</em>
           </h1>
-          <p className="text-[#F5F0E8]/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[#3E2723]/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
             Desde 1994, trilhamos um caminho fundamentado na excelência, oferecendo o que há
             de mais sofisticado na nutrição para elevar a qualidade de vida.
           </p>
@@ -65,10 +65,10 @@ export default function SobrePage() {
       </section>
 
       {/* ─── TIMELINE ─────────────────────────────────────── */}
-      <section className="py-32 bg-[#111815] border-y border-[#C9A84C]/10">
+      <section className="py-32 bg-white border-y border-[#A88573]/30">
         <div className="max-w-[1000px] mx-auto px-6 relative">
           
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[1px] bg-[#C9A84C]/20 -translate-x-1/2" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[1px] bg-[#A88573]/20 -translate-x-1/2" />
 
           {timelineItems.map((item, i) => (
             <motion.div
@@ -81,16 +81,16 @@ export default function SobrePage() {
                 i % 2 === 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
-              <div className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full bg-[#111815] border-2 border-[#C9A84C] -translate-x-1/2 shadow-[0_0_15px_rgba(201,168,76,0.6)]" />
+              <div className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full bg-white border-2 border-[#A88573] -translate-x-1/2 shadow-[0_0_15px_rgba(168,133,115,0.6)]" />
               
               <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${i % 2 === 0 ? 'md:pl-16 text-left' : 'md:pr-16 md:text-right'}`}>
-                <h2 className="text-5xl lg:text-7xl text-[#C9A84C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <h2 className="text-5xl lg:text-7xl text-[#A88573] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {item.year}
                 </h2>
-                <h3 className="text-2xl text-[#F5F0E8] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <h3 className="text-2xl text-[#3E2723] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {item.title}
                 </h3>
-                <p className="text-[#F5F0E8]/50 font-light leading-relaxed">
+                <p className="text-[#3E2723]/50 font-light leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -103,10 +103,10 @@ export default function SobrePage() {
       <section className="py-32 relative">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl text-[#F5F0E8]" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2 className="text-4xl md:text-5xl text-[#3E2723]" style={{ fontFamily: 'Playfair Display, serif' }}>
               Nossos Pilares
             </h2>
-            <div className="w-16 h-[1px] bg-[#4ECDC4] mx-auto mt-8" />
+            <div className="w-16 h-[1px] bg-[#480e0d] mx-auto mt-8" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,15 +117,15 @@ export default function SobrePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-[#111815] border border-[#C9A84C]/20 rounded-[30px] p-10 flex flex-col items-center justify-center text-center hover:bg-[#0A0F0D] hover:border-[#4ECDC4]/50 transition-all duration-500 group"
+                className="bg-white border border-[#A88573]/40 rounded-[30px] p-10 flex flex-col items-center justify-center text-center hover:bg-[#FCF9F2] hover:border-[#480e0d]/50 transition-all duration-500 group"
               >
-                <div className="w-20 h-20 rounded-2xl bg-[#C9A84C]/10 flex items-center justify-center mb-8 border border-[#C9A84C]/20 group-hover:scale-110 transition-transform duration-500">
-                  <v.icon className="w-8 h-8 text-[#C9A84C] group-hover:text-[#4ECDC4] transition-colors" strokeWidth={1.5} />
+                <div className="w-20 h-20 rounded-2xl bg-[#A88573]/10 flex items-center justify-center mb-8 border border-[#A88573]/40 group-hover:scale-110 transition-transform duration-500">
+                  <v.icon className="w-8 h-8 text-[#A88573] group-hover:text-[#480e0d] transition-colors" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl text-[#F5F0E8] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <h3 className="text-2xl text-[#3E2723] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {v.title}
                 </h3>
-                <p className="text-[#F5F0E8]/50 font-light text-sm">
+                <p className="text-[#3E2723]/50 font-light text-sm">
                   {v.desc}
                 </p>
               </motion.div>
