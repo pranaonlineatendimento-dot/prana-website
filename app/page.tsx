@@ -31,13 +31,18 @@ const staggerContainer = {
 
 export default function HomePage() {
   return (
-    <div className="bg-[#FCF9F2] overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
+    <div className="overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
       
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center pt-24 pb-12">
-        {/* Glow Effects */}
-        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-[#480e0d]/10 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#A88573]/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+        <Image
+          src="/assets/images/site-images/hero-tree.png"
+          alt="Prana Hero Background"
+          fill
+          className="object-cover z-0"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/35 z-0" />
 
         <div className="max-w-[1400px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full z-10">
           
@@ -48,25 +53,25 @@ export default function HomePage() {
             animate="visible"
             className="flex flex-col items-start"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 border border-[#A88573]/40 bg-white rounded-full px-4 py-1.5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#480e0d] animate-pulse" />
-              <span className="text-xs text-[#C4A18F] font-medium tracking-widest uppercase">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 border border-white/40 bg-white/15 backdrop-blur-sm rounded-full px-5 py-2 mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#c83a33] animate-pulse" />
+              <span className="text-xs text-white font-semibold tracking-widest uppercase">
                 Barrashopping · Desde 1994
               </span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
-              className="text-6xl sm:text-7xl lg:text-8xl text-[#3E2723] leading-[1.05] mb-8 font-serif"
+              className="text-6xl sm:text-7xl lg:text-8xl text-white leading-[1.05] mb-8 font-serif drop-shadow-[0_4px_16px_rgba(0,0,0,0.5)]"
             >
               Saúde que<br />
-              <em className="not-italic bg-clip-text text-transparent bg-gradient-to-r from-[#480e0d] to-[#7a1a17]">
+              <em className="not-italic bg-clip-text text-transparent bg-gradient-to-r from-[#741b18] to-[#9b241f]">
                 transforma
               </em><br />
               sua vida.
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="text-[#3E2723]/70 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-lg">
+            <motion.p variants={fadeUp} className="text-white/90 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
               Orgânicos, funcionais e os melhores suplementos. 
               Uma curadoria de excelência para quem exige resultados e qualidade superior.
             </motion.p>
@@ -81,7 +86,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/sobre"
-                className="inline-flex items-center gap-3 border border-[#A88573] text-[#A88573] px-8 py-4 rounded-full font-medium hover:bg-[#A88573] hover:text-[#FCF9F2] transition-all duration-300"
+                className="inline-flex items-center gap-3 border border-white/80 text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-[#741b18] transition-all duration-300"
               >
                 Nossa Essência
               </Link>
@@ -92,11 +97,11 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative hidden lg:flex lg:justify-end lg:items-center w-full ml-auto"
+            className="relative hidden lg:flex lg:justify-end lg:items-center w-full ml-auto cursor-default"
           >
-            <div className="relative border border-[#A88573]/40 rounded-[2rem] overflow-hidden w-fit shadow-[0_0_40px_rgba(168,133,115,0.05)]">
-              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#FCF9F2] to-transparent z-10 pointer-events-none" />
+            <div className="relative border border-[#FAFAF8]/30 rounded-[2rem] overflow-hidden w-fit shadow-[0_0_60px_rgba(0,0,0,0.4)] bg-black/10 backdrop-blur-sm p-2">
               <Image
                 src="/assets/images/site-images/hero-portrait.png"
                 alt="Prana Produtos Naturais"
@@ -112,10 +117,13 @@ export default function HomePage() {
 
         {/* Scroll Indicator */}
         <motion.button
-          onClick={() => document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => {
+            const el = document.getElementById('filosofia')
+            if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' })
+          }}
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[#A88573]/50 hover:text-[#A88573] transition-colors cursor-pointer"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white hover:text-[#c83a33] transition-colors cursor-pointer z-10"
           aria-label="Rolar para baixo"
         >
           <ChevronDown className="w-8 h-8" />
@@ -123,7 +131,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── STATS BAR ────────────────────────────────────── */}
-      <section id="stats" className="border-y border-[#A88573]/30 bg-white/50 backdrop-blur-sm backdrop-saturate-150 py-10 relative z-20">
+      <section id="stats" className="border-y border-[#A88573]/20 bg-white/60 backdrop-blur-sm py-10 relative">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-x-0 lg:divide-x divide-[#A88573]/10 text-center lg:text-left">
             {[
@@ -146,7 +154,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── FILOSOFIA BANNER ───────────────────────────────── */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+      <section id="filosofia" className="relative w-full h-[520px] flex items-center justify-center overflow-hidden">
         <Image
           src="/assets/images/site-images/hero-landscape.png"
           alt="Nossa Filosofia"
@@ -156,7 +164,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/50 z-0" />
         
         <div className="relative z-10 text-center px-6">
-          <p className="text-[#A88573] text-sm font-semibold tracking-widest uppercase mb-6 drop-shadow-md">Nossa Filosofia</p>
+          <p className="text-white text-xs font-bold tracking-[0.4em] uppercase mb-4 bg-[#741b18]/70 backdrop-blur-sm px-4 py-1.5 rounded-full inline-block border border-white/20">Nossa Filosofia</p>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -179,13 +187,13 @@ export default function HomePage() {
       </section>
 
       {/* ─── CATEGORIES ─────────────────────────────────────── */}
-      <section className="py-32 relative overflow-hidden bg-white border-y border-[#A88573]/30">
+      <section className="py-32 relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl text-[#3E2723] font-serif">
+            <h2 className="text-4xl md:text-5xl text-[#741b18] font-serif">
               O que você encontra aqui
             </h2>
-            <div className="w-24 h-[1px] bg-[#A88573] mx-auto mt-8" />
+            <div className="w-24 h-[1px] bg-[#741b18]/40 mx-auto mt-8" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -201,17 +209,18 @@ export default function HomePage() {
                 key={c.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -4, boxShadow: '0 12px 30px rgba(116,27,24,0.12)', transition: { duration: 0.25 } }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group bg-[#FCF9F2] border border-[#A88573]/40 p-10 hover:border-[#480e0d] transition-colors duration-500 rounded-[30px]"
+                className="group bg-white/80 backdrop-blur-sm border border-[#741b18]/15 p-10 hover:border-[#741b18]/40 hover:shadow-xl transition-all duration-300 rounded-[30px] cursor-default"
               >
-                <div className="mb-6 w-14 h-14 rounded-2xl border border-[#480e0d]/30 bg-[#480e0d]/5 flex items-center justify-center text-[#480e0d] group-hover:bg-[#480e0d] group-hover:text-[#FCF9F2] transition-colors duration-500">
+                <div className="mb-6 w-14 h-14 rounded-2xl border border-[#741b18]/20 bg-[#741b18]/5 flex items-center justify-center text-[#741b18] group-hover:bg-[#741b18] group-hover:text-white transition-colors duration-500">
                   <c.icon className="w-6 h-6" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl text-[#A88573] mb-4 font-serif">
+                <h3 className="text-2xl text-[#741b18] mb-4 font-serif">
                   {c.title}
                 </h3>
-                <p className="text-[#3E2723]/60 leading-relaxed font-light">
+                <p className="text-[#5a5a5a] leading-relaxed font-light">
                   {c.desc}
                 </p>
               </motion.div>

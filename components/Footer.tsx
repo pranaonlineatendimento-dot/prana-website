@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FCF9F2] text-[#3E2723] border-t border-[#A88573]/30 pt-20">
+    <footer className="bg-[#FAFAF8] text-[#3E2723] border-t border-[#A88573]/30 pt-20">
       <div className="max-w-[1400px] mx-auto px-6 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           {/* Brand */}
@@ -21,10 +21,10 @@ export default function Footer() {
               Desde 1994 no coração do Barrashopping.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/pranabarraprodutosnaturais" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:border-[#480e0d] hover:text-[#FCF9F2] hover:bg-[#480e0d] transition-colors bg-white">
+              <a href="https://www.instagram.com/pranabarraprodutosnaturais" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:border-[#741b18] hover:text-[#FAFAF8] hover:bg-[#741b18] transition-colors bg-white">
                 <Instagram className="w-5 h-5 flex-shrink-0" />
               </a>
-              <a href="https://www.facebook.com/pranaprodutosnaturais" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:border-[#480e0d] hover:text-[#FCF9F2] hover:bg-[#480e0d] transition-colors bg-white">
+              <a href="https://www.facebook.com/pranaprodutosnaturais" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:border-[#741b18] hover:text-[#FAFAF8] hover:bg-[#741b18] transition-colors bg-white">
                 <Facebook className="w-5 h-5 flex-shrink-0" />
               </a>
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#480e0d] mb-6">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#741b18] mb-6">
               Navegação
             </h4>
             <ul className="space-y-4">
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#480e0d] mb-6">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#741b18] mb-6">
               Contato
             </h4>
             <ul className="space-y-5">
@@ -70,13 +70,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="w-4 h-4 text-[#A88573] flex-shrink-0" />
-                <a href="tel:+552124319047" className="text-sm text-[#3E2723]/60 hover:text-[#480e0d] transition-colors">
+                <a href="tel:+552124319047" className="text-sm text-[#3E2723]/60 hover:text-[#741b18] transition-colors">
                   (21) 2431-9047
                 </a>
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="w-4 h-4 text-[#A88573] flex-shrink-0" />
-                <a href="mailto:pranaprodutosnaturais@hotmail.com" className="text-sm text-[#3E2723]/60 hover:text-[#480e0d] transition-colors">
+                <a href="mailto:pranaprodutosnaturais@hotmail.com" className="text-sm text-[#3E2723]/60 hover:text-[#741b18] transition-colors">
                   pranaprodutosnaturais@hotmail.com
                 </a>
               </li>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* QR Code */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#480e0d] mb-6">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-[#741b18] mb-6">
               Fale Conosco
             </h4>
             <div className="bg-white border border-[#A88573]/40 rounded-2xl p-6 flex flex-col items-center gap-4">

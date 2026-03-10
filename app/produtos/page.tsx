@@ -23,7 +23,7 @@ const fadeUp = {
 
 export default function ProdutosPage() {
   return (
-    <div className="bg-[#FCF9F2] overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
+    <div className="bg-[#FAFAF8] overflow-hidden selection:bg-[#A88573] selection:text-[#FAFAF8]">
       
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="relative pt-48 pb-32 flex flex-col items-center justify-center text-center">
@@ -35,7 +35,7 @@ export default function ProdutosPage() {
           variants={fadeUp}
           className="max-w-4xl mx-auto px-6 relative z-10"
         >
-          <p className="text-[#480e0d] tracking-widest uppercase text-xs font-bold mb-6">Nossa Seleção Premium</p>
+          <p className="text-[#741b18] tracking-widest uppercase text-xs font-bold mb-6">Nossa Seleção Premium</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-[#3E2723] leading-[1.1] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
             Nossos <br />
             <em className="text-[#A88573] not-italic">Produtos.</em>
@@ -54,7 +54,7 @@ export default function ProdutosPage() {
             <h2 className="text-4xl lg:text-5xl text-[#A88573]" style={{ fontFamily: 'Playfair Display, serif' }}>
               Descubra por Segmento
             </h2>
-            <div className="w-16 h-[1px] bg-[#480e0d] mx-auto mt-8" />
+            <div className="w-16 h-[1px] bg-[#741b18] mx-auto mt-8" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -65,10 +65,10 @@ export default function ProdutosPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-[#FCF9F2] border border-[#A88573]/20 p-8 rounded-[30px] flex flex-col items-start hover:border-[#A88573]/40 hover:-translate-y-2 transition-all duration-500 group"
+                className="bg-[#FAFAF8] border border-[#A88573]/20 p-8 rounded-[30px] flex flex-col items-start hover:border-[#A88573]/40 hover:-translate-y-2 transition-all duration-500 group"
               >
                 <div className="mb-6">
-                  <c.icon className="w-8 h-8 text-[#480e0d] group-hover:text-[#A88573] transition-colors" strokeWidth={1} />
+                  <c.icon className="w-8 h-8 text-[#741b18] group-hover:text-[#A88573] transition-colors" strokeWidth={1} />
                 </div>
                 <h3 className="text-xl text-[#3E2723] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {c.title}

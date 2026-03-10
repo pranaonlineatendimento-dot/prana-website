@@ -12,12 +12,12 @@ const timelineItems = [
   {
     year: '1980',
     title: 'O Início',
-    desc: 'Nasce a Prana, buscando pioneirismo com nossa primeira loja no Leblon (em funcionamento até 2015).',
+    desc: 'Abertura da primeira loja Prana, no Leblon, Rio de Janeiro.',
   },
   {
     year: '1994',
-    title: 'A chegada ao Barrashopping',
-    desc: 'Expandimos a nossa operação, inaugurando as portas no coração da Barra da Tijuca, focando ainda mais em saúde.',
+    title: 'Expansão',
+    desc: 'Expansão com nova loja no Barrashopping.',
   },
   {
     year: '2015',
@@ -40,11 +40,11 @@ const values = [
 
 export default function SobrePage() {
   return (
-    <div className="bg-[#FCF9F2] overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
+    <div className="bg-[#FAFAF8] overflow-hidden selection:bg-[#A88573] selection:text-[#FAFAF8]">
       
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="relative pt-48 pb-32 flex flex-col items-center justify-center text-center">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#480e0d]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#741b18]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
         
         <motion.div
           initial="hidden"
@@ -55,11 +55,10 @@ export default function SobrePage() {
           <p className="text-[#A88573] tracking-widest uppercase text-xs font-bold mb-6">Nossa História</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-[#3E2723] leading-[1.1] mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
             A Arte do <br />
-            <em className="text-[#480e0d] not-italic">Bem-Viver.</em>
+            <em className="text-[#741b18] not-italic">Bem-Viver.</em>
           </h1>
           <p className="text-[#3E2723]/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
-            Desde 1994, trilhamos um caminho fundamentado na excelência, oferecendo o que há
-            de mais sofisticado na nutrição para elevar a qualidade de vida.
+            Começamos nossa loja em 1980, no Leblon, com a missão de oferecer produtos naturais de qualidade para quem acredita que bem-estar começa pela alimentação. Em 1994, expandimos nossa presença com uma loja no Barrashopping, levando nossa curadoria de orgânicos, suplementos e funcionais para ainda mais famílias cariocas.
           </p>
         </motion.div>
       </section>
@@ -106,7 +105,7 @@ export default function SobrePage() {
             <h2 className="text-4xl md:text-5xl text-[#3E2723]" style={{ fontFamily: 'Playfair Display, serif' }}>
               Nossos Pilares
             </h2>
-            <div className="w-16 h-[1px] bg-[#480e0d] mx-auto mt-8" />
+            <div className="w-16 h-[1px] bg-[#741b18] mx-auto mt-8" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,10 +116,10 @@ export default function SobrePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white border border-[#A88573]/40 rounded-[30px] p-10 flex flex-col items-center justify-center text-center hover:bg-[#FCF9F2] hover:border-[#480e0d]/50 transition-all duration-500 group"
+                className="bg-white border border-[#A88573]/40 rounded-[30px] p-10 flex flex-col items-center justify-center text-center hover:bg-[#FAFAF8] hover:border-[#741b18]/50 transition-all duration-500 group"
               >
                 <div className="w-20 h-20 rounded-2xl bg-[#A88573]/10 flex items-center justify-center mb-8 border border-[#A88573]/40 group-hover:scale-110 transition-transform duration-500">
-                  <v.icon className="w-8 h-8 text-[#A88573] group-hover:text-[#480e0d] transition-colors" strokeWidth={1.5} />
+                  <v.icon className="w-8 h-8 text-[#A88573] group-hover:text-[#741b18] transition-colors" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl text-[#3E2723] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {v.title}

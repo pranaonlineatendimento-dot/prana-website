@@ -32,8 +32,8 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#FCF9F2]/80 backdrop-blur-xl border-b border-[#A88573]/30 shadow-lg shadow-black/20'
-          : 'bg-transparent border-b border-transparent'
+          ? 'bg-[#FCF9F2]/90 backdrop-blur-xl border-b border-[#A88573]/30 shadow-md'
+          : 'bg-black/30 backdrop-blur-sm border-b border-white/10'
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
@@ -44,8 +44,9 @@ export default function Navbar() {
             alt="Prana"
             width={150}
             height={60}
-            style={{ objectFit: 'contain' }}
-            className="group-hover:opacity-80 transition-opacity drop-shadow-lg"
+            style={{ objectFit: 'contain', filter: scrolled ? 'none' : 'brightness(1.8) drop-shadow(0 0 10px rgba(255,255,255,0.4))' }}
+            className="group-hover:opacity-80 transition-opacity"
+            priority
           />
         </Link>
 
@@ -57,15 +58,17 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`relative text-sm font-medium tracking-wide transition-colors ${
-                  isActive ? 'text-[#A88573]' : 'text-[#3E2723]/70 hover:text-[#A88573]'
+                className={`relative text-sm font-semibold tracking-wide transition-colors ${
+                  scrolled
+                    ? (isActive ? 'text-[#741b18]' : 'text-[#3E2723] hover:text-[#741b18]')
+                    : (isActive ? 'text-[#c83a33]' : 'text-white hover:text-[#c83a33]')
                 }`}
               >
                 {label}
                 {isActive && (
                   <motion.div
                     layoutId="navbar-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-[1px] bg-[#A88573]"
+                    className="absolute -bottom-1 left-0 right-0 h-[1px] bg-[#741b18]"
                     initial={false}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />

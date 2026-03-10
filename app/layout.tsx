@@ -33,9 +33,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="grain-overlay">
+      <body className="grain-overlay" style={{ backgroundColor: '#FAFAF8' }}>
+        {/* Wood texture overlay - fixed behind all content */}
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundImage: "url('/assets/images/site-images/wood-texture.png')",
+            backgroundRepeat: 'repeat',
+            backgroundSize: '300px 300px',
+            opacity: 0.45,
+            mixBlendMode: 'multiply',
+            pointerEvents: 'none',
+            zIndex: 0,
+          }}
+          aria-hidden="true"
+        />
         <Navbar />
-        <main>{children}</main>
+        <main style={{ position: 'relative', zIndex: 1 }}>{children}</main>
         <Footer />
       </body>
     </html>

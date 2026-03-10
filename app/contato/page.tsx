@@ -10,11 +10,11 @@ const fadeUp = {
 
 export default function ContatoPage() {
   return (
-    <div className="bg-[#FCF9F2] overflow-hidden selection:bg-[#A88573] selection:text-[#FCF9F2]">
+    <div className="bg-[#FAFAF8] overflow-hidden selection:bg-[#A88573] selection:text-[#FAFAF8]">
       
       <section className="relative pt-48 pb-32">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#A88573]/10 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#480e0d]/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#741b18]/10 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
           <motion.div
@@ -27,7 +27,7 @@ export default function ContatoPage() {
               Fale com <br />
               <em className="text-[#A88573] not-italic">a Prana.</em>
             </h1>
-            <div className="w-16 h-[1px] bg-[#480e0d] mx-auto mt-10" />
+            <div className="w-16 h-[1px] bg-[#741b18] mx-auto mt-10" />
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -71,10 +71,10 @@ export default function ContatoPage() {
                 <motion.div
                   key={c.title}
                   variants={fadeUp}
-                  className="bg-white border border-[#A88573]/30 p-6 xl:p-8 rounded-[30px] xl:rounded-[40px] flex flex-col justify-between hover:border-[#480e0d]/50 hover:bg-[#FCF9F2] transition-all duration-500 group overflow-hidden"
+                  className="bg-white border border-[#A88573]/30 p-6 xl:p-8 rounded-[30px] xl:rounded-[40px] flex flex-col justify-between hover:border-[#741b18]/50 hover:bg-[#FAFAF8] transition-all duration-500 group overflow-hidden"
                 >
                   <div className="mb-6 xl:mb-8">
-                    <c.icon className="w-8 h-8 text-[#A88573] group-hover:text-[#480e0d] transition-colors" strokeWidth={1} />
+                    <c.icon className="w-8 h-8 text-[#A88573] group-hover:text-[#741b18] transition-colors" strokeWidth={1} />
                   </div>
                   <div className="w-full">
                     <h3 className="text-lg font-medium text-[#3E2723] mb-1 xl:mb-2">{c.title}</h3>
@@ -95,16 +95,16 @@ export default function ContatoPage() {
                 </motion.div>
               ))}
 
-              <motion.div variants={fadeUp} className="sm:col-span-2 bg-gradient-to-r from-white to-[#FCF9F2] border border-[#A88573]/30 p-8 rounded-[40px] flex items-center justify-between group">
+              <motion.div variants={fadeUp} className="sm:col-span-2 bg-gradient-to-r from-white to-[#FAFAF8] border border-[#A88573]/30 p-8 rounded-[40px] flex items-center justify-between group">
                 <div>
                   <h3 className="text-lg font-medium text-[#3E2723] mb-2">Redes Sociais</h3>
                   <p className="text-[#3E2723]/50 font-light text-[13px] xl:text-sm">Acompanhe nossas novidades.</p>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/pranabarraprodutosnaturais" className="w-12 h-12 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:bg-[#A88573] hover:text-[#FCF9F2] transition-all text-[#480e0d]">
+                  <a href="https://www.instagram.com/pranabarraprodutosnaturais" className="w-12 h-12 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:bg-[#A88573] hover:text-[#FAFAF8] transition-all text-[#741b18]">
                     <Instagram className="w-5 h-5" strokeWidth={1.5} />
                   </a>
-                  <a href="https://www.facebook.com/pranaprodutosnaturais" className="w-12 h-12 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:bg-[#A88573] hover:text-[#FCF9F2] transition-all text-[#480e0d]">
+                  <a href="https://www.facebook.com/pranaprodutosnaturais" className="w-12 h-12 rounded-full border border-[#A88573]/30 flex items-center justify-center hover:bg-[#A88573] hover:text-[#FAFAF8] transition-all text-[#741b18]">
                     <Facebook className="w-5 h-5" strokeWidth={1.5} />
                   </a>
                 </div>
@@ -119,7 +119,7 @@ export default function ContatoPage() {
               className="flex flex-col gap-6 h-full"
             >
               {/* WhatsApp Large Card */}
-              <div className="bg-white border border-[#480e0d]/20 rounded-[40px] p-12 flex flex-col sm:flex-row items-center gap-10 hover:border-[#480e0d]/60 transition-colors duration-500">
+              <div className="bg-white border border-[#741b18]/20 rounded-[40px] p-12 flex flex-col sm:flex-row items-center gap-10 hover:border-[#741b18]/60 transition-colors duration-500">
                 <div className="bg-white p-3 rounded-3xl shadow-[0_0_40px_rgba(78,205,196,0.15)] flex-shrink-0">
                   <img
                     src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://wa.me/5521967735442&color=480e0d&bgcolor=FFFFFF"
@@ -128,7 +128,7 @@ export default function ContatoPage() {
                   />
                 </div>
                 <div className="text-center sm:text-left flex-grow">
-                  <h3 className="text-3xl text-[#480e0d] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>Atendimento VIP</h3>
+                  <h3 className="text-3xl text-[#741b18] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>Atendimento VIP</h3>
                   <p className="text-[#3E2723]/60 font-light text-sm mb-6">
                     Aponte sua câmera para solicitar produtos ou tirar suas dúvidas diretamente pelo WhatsApp.
                   </p>
@@ -136,7 +136,7 @@ export default function ContatoPage() {
                     href="https://wa.me/5521967735442"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-[#480e0d] text-[#FCF9F2] px-8 py-3 rounded-full text-sm font-bold hover:bg-[#7a1a17] hover:scale-105 transition-all w-full sm:w-auto text-center"
+                    className="inline-block bg-[#741b18] text-[#FAFAF8] px-8 py-3 rounded-full text-sm font-bold hover:bg-[#7a1a17] hover:scale-105 transition-all w-full sm:w-auto text-center"
                   >
                     Chamar no WhatsApp
                   </a>
