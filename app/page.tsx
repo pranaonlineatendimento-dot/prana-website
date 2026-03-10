@@ -161,7 +161,7 @@ export default function HomePage() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 z-0" />
+        <div className="absolute inset-0 bg-black/30 z-0" />
         
         <div className="relative z-10 text-center px-6">
           <p className="text-white text-xs font-bold tracking-[0.4em] uppercase mb-4 bg-[#741b18]/70 backdrop-blur-sm px-4 py-1.5 rounded-full inline-block border border-white/20">Nossa Filosofia</p>
